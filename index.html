@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Novadigital</title>
+  </head>
+
+  <body data-barba="wrapper">
+    <header class="nav-header">
+    <h1><a href="./index.html" id="logo">Novadigital.</a></h1>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+    </div>
+    </header>
+    <div id="carousel" class="snap" data-barba="container" data-barba-namespace="home">
+        <section id="carousel-1" class="slide">
+          <div class="hero-img">
+          <img src="./img/z.png" alt="forest image">
+          <div class="reveal-img"></div>
+        </div>
+        <div class="hero-desc">
+          <div class="title">
+            <h2>Agence digitale <span class="mountain-span">Web.</span></h2>
+            <div class="title-swipe t-swipe1">
+            </div>
+          </div>
+          <p>Agence digitale spécialiste de la création de site internet sur mesure, la création et mise en oeuvre de stratégie digitale, le référencement naturel et payant ainsi <br>que le webmarketing. L’agence Digital Cover à pour mission de conseiller et réponde aux différents besoins et enjeux de présence et communication digitale des Marques, PME, ETI et Grands Comptes de tout secteur.</p>
+          <a href="./project.html" class="explore mountaine-exp">Explore</a>
+          <div class="reveal-text"></div>
+        </div>
+      </section>
+      <section id="carousel-2" class="slide">
+        <div class="hero-img">
+          <img src="./img/e.png" alt="hike image" />
+          <div class="reveal-img"></div>
+        </div>
+        <div class="hero-desc">
+          <div class="title">
+            <h2>
+              Web design et <span class="fashion-span">Developpement.</span>
+            </h2>
+            <div class="title-swipe t-swipe2"></div>
+          </div>
+          <p>
+            Gérer l’intégralité de votre image de marque est le cœur de notre métier. L’approche de novadigital consiste à vous créer une identité visuelle qui vous ressemble et qui met en avant vos attentes, qui représentera votre avantage concurrentiel afin de développer votre notoriété et votre business en ligne.
+          </p>
+          <a href="./devis/index.html" class="explore mountaine-exp">Devis</a>
+          <div class="reveal-text"></div>
+        </div>
+      </section>
+      <section id="carousel-3" class="slide">
+        <div class="hero-img">
+          <img src="./img/z.png" alt="fashion image" />
+          <div class="reveal-img"></div>
+        </div>
+        <div class="hero-desc">
+          <div class="title">
+
+            <h2>Référencement  <span class="hike-span">SEO.</span></h2>
+
+            <div class="title-swipe t-swipe3"></div>
+          </div>
+
+          <p>
+            Vous rendre visible sur le long terme est au centre de nos préoccupations.<br>
+            Avec un suivi régulier par des experts en référencement naturel Novadigital vous assure le meilleur ranking pour vous assurer un traffic qualifié.
+          </p>
+          <a href="./devis/index.html" class="explore mountaine-exp">Devis</a>
+          <div class="reveal-text"></div>
+        </div>
+      </section>
+
+      <section id="carousel-4" class="slide">
+        <div class="hero-img">
+          <img src="./img/e.png" alt="fashion image" />
+          <div class="reveal-img"></div>
+        </div>
+        <div class="hero-desc">
+          <div class="title">
+
+            <h2>Réponse digitale <span class="last-span">Sur-mesure.</span></h2>
+
+            <div class="title-swipe t-swipe4"></div>
+          </div>
+
+          <p>
+            Parce que vos enjeux de notoriété, de développement commercial ou de vente passent par le digital, notre responsabilité est de comprendre rapidement vos problématiques et d’y répondre concrètement par un dispositif digital sur-mesure
+          </p>
+          <a href="./devis/index.html" class="explore mountaine-exp">Devis</a>
+          <div class="reveal-text"></div>
+        </div>
+      </section>
+    </div>
+
+    <nav class="nav-bar">
+        <ul class="nav-links">
+          <a class="inBurger" href=./devis.html><h3>Devis</h3></a>
+          <a class="inBurger" href=./project.html><h3>Projet</h3></a>
+          <a class="inBurger" href=./contact.html><h3>Contact</h3></a>
+          <a class="inBurger" href=./equipe.html><h3>Equipe</h3></a>
+        </ul>
+        <div class="contact">
+          <h2>Contact</h2>
+          <p>
+            Novadigital@contact.com<br>Novadigital@contact.com<br>0642772385
+          </p>
+          <h2>adresse</h2>
+          <p>72 Avenue du Maréchale de Saxe <br>69003 Lyon </p>
+        </div>
+      </nav>
+
+
+  <div class="cursor">
+    <span class="cursor-text"></span>
+  </div>
+  <div class="swipe swipe1"></div>
+  <div class="swipe swipe2"></div>
+  <div class="swipe swipe3"></div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"
+      integrity="sha256-3arngJBQR3FTyeRtL3muAGFaGcL8iHsubYOqq48mBLw="
+      crossorigin="anonymous"
+    ></script>
+    <!-- unpkg -->
+    <script src="https://unpkg.com/@barba/core"></script>
+
+    <script src="./app.js"></script>
+
+  </body>
+</html>
