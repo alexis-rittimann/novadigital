@@ -80,21 +80,18 @@ html, body {
   justify-content: space-evenly;
 }
 
-/* #carousel-1 {
-  background-color: #e34747;
-}
-
-#carousel-2 {
-  background-color: #5ab92c;
-}
-
-#carousel-3 {
-  background-color: #226de2;
-} */
 #logo img{
-  /* background-image: url(img/logonoir.png); */
   max-width: 45%;
   max-height: 45%;
+}
+.hidden{
+  flex-direction: column;
+}
+.too{
+  font-size: 0.3rem;
+}
+.thee{
+  color: #ffd94e;
 }
 .b{
   display: none;
@@ -341,144 +338,6 @@ iframe{
   margin-right: auto;
   margin-top: -8%;
 }
-@media screen and (max-width: 1500px) {
-  .hero-img {
-    max-width: 80%;
-    /* height: auto; */
-  }
-
-}
-
-@media screen and (max-width: 1024px) {
-  main {
-    width: 100%;
-    margin: 0;
-  }
-  .devis{
-    color: white;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-    margin-top: 25%;
-  }
-  .icone img{
-
-    margin-top: -40%;
-  }
-
-  .slide {
-    display: flex;
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-
-  }
-  .hero-desc {
-    padding: 0;
-    margin: 0;
-  }
-  .hero-img {
-    padding-top: 8rem;
-    margin-left: 0rem;
-    align-items: center;
-  }
-  .hero-desc h2 {
-    font-size: 3.6rem;
-    padding: 1rem 1rem;
-    margin: 0;
-    width: 100%;
-  }
-  .hero-desc p {
-    padding: 2rem 3rem;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    text-align: justify;
-  }
-  .explore {
-    width: 60%;
-    margin: auto;
-    font-size: 2rem;
-  }
-  .detail-slide {
-    width: 100%;
-    text-align: center;
-  }
-
-  .nav-bar {
-    display: block;
-  }
-  .nav-links {
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 40%;
-  }
-
-  .nav-links h3{
-    line-height: 0.20rem;
-    font-size: 5rem;
-    margin-top: 25%;
-    font-weight: bold;
-  }
-  .contact{
-    display: none;
- }
- /* .contact2{
-   flex-direction: column;
-
- } */
- .adresse{
-   margin: 1vh 0vh;
- }
- .mail{
-   margin: 1vh 0vh;
- }
-  /* .contact2 h2 {
-    font-size: 3rem;
-    text-align: center;
-    margin-top: 0vh;
-
-  }
-  .contact2 p {
-    font-size: 1.2rem;
-    padding: 1rem;
-    text-align: center;
-  } */
-  .scrollmagic-pin-spacer {
-    display: none;
-  }
-  .nav-header{
-    padding: 0 4rem;
-    min-height: 10vh;
-    font-size: 1em;
-  }
-  #logo img{
-    max-width: 65%;
-    max-height: 65%;
-  }
-  .line1,.line2{
-    width: 5rem;
-    height: 0.4rem;
-    margin: 0.4rem;
-  }
-  .cursor{
-    display:  none;
-  }
-  .explore {
-     display: inline-block;
-     margin: 10px;
-     padding : 0.5rem 1rem;
-     width: 60%;
-     font-size: 2rem;
-   }
-   .img-hidden{
-    display: none;
-   }
-
-}
 .btn {
 display: inline;
 font-weight: 400;
@@ -639,4 +498,206 @@ legend{
 .contact2 p{
   font-size: 1.5rem;
   line-height: 2rem;
+}
+@media screen and (max-width: 1500px) {
+  .hero-img {
+    max-width: 80%;
+    /* height: auto; */
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    width: 100%;
+    margin: 0;
+  }
+  .form-contact{
+  display:flex;
+  flex-direction: column;
+ margin-left: 1.5%;
+ margin-top: 20%;
+ width: 170%;
+
+}
+.form-contact li>label{
+  font-size:2rem;
+  margin-top: -8%;
+}
+.form-contact p{
+ font-size:1.25rem;
+}
+.form-contact input[type="text"],
+.form-contact input[type="mail"],
+.form-contact textarea{
+ font-size:2rem;
+}
+.form-contact legend{
+  font-size: 3.5rem;
+}
+.form-contact button{
+ font-size: 2rem;
+ margin-left:25%;
+}
+.contact2{
+  display: flex;
+  flex-direction: row;
+  align-items:baseline;
+  text-align: center;
+  margin-left: 10%;
+}
+
+.contact2 h2{
+  font-size: 3rem;
+  padding: 2rem 5rem;
+
+}
+
+iframe{
+ bottom:0%;
+ height: 25%;
+}
+    .icone img{
+      margin-top: 15%;
+    }
+   .box{
+     width: 90%;
+     height: 100%;
+   }
+   legend{
+     font-size: 2.5rem;
+   }
+   .form-style-7 a{
+     font-size: 2rem;
+   }
+   .btn {
+     font-size: 1.4rem;
+   }
+   .form-style-7 input[type="text"],
+    .form-style-7 input[type="tel"],
+    .form-style-7 input[type="email"],
+    .form-style-7 input[type="file"]::before,
+    .form-style-7 textarea
+    {
+      font-size: 1.4rem;
+    }
+    .form-style-7 li{
+     font-size: 1.5rem;
+    }
+    .form-style-7 li>label{
+      font-size: 1.5rem;
+      margin-top: -35px;
+    }
+  .devis{
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 25%;
+  }
+
+  .icone img{
+
+    margin-top: -40%;
+  }
+
+  .slide {
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+
+  }
+  .hero-desc {
+    padding: 0;
+    margin: 0;
+  }
+  .hero-img {
+    padding-top: 8rem;
+    margin-left: 0rem;
+    align-items: center;
+  }
+  .hero-desc h2 {
+    font-size: 3.6rem;
+    padding: 1rem 1rem;
+    margin: 0;
+    width: 100%;
+  }
+  .hero-desc p {
+    padding: 2rem 3rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: justify;
+  }
+  .explore {
+    width: 60%;
+    margin: auto;
+    font-size: 2rem;
+  }
+  .detail-slide {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-bar {
+    display: block;
+  }
+  .nav-links {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 40%;
+  }
+
+  .nav-links h3{
+    line-height: 0.20rem;
+    font-size: 5rem;
+    margin-top: 25%;
+    font-weight: bold;
+  }
+  .contact{
+    display: none;
+ }
+
+ .adresse{
+   margin: 1vh 0vh;
+ }
+ .mail{
+   margin: 1vh 0vh;
+ }
+
+  .scrollmagic-pin-spacer {
+    display: none;
+  }
+  .nav-header{
+    padding: 0 4rem;
+    min-height: 10vh;
+    font-size: 1em;
+  }
+  #logo img{
+    max-width: 65%;
+    max-height: 65%;
+  }
+  .line1,.line2{
+    width: 5rem;
+    height: 0.4rem;
+    margin: 0.4rem;
+  }
+  .cursor{
+    display:  none;
+  }
+  .explore {
+     display: inline-block;
+     margin: 10px;
+     padding : 0.5rem 1rem;
+     width: 60%;
+     font-size: 2rem;
+   }
+   .img-hidden{
+    display: none;
+   }
+
 }
