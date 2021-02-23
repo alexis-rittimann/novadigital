@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./style.css">
@@ -9,30 +9,78 @@
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Novadigital</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="images/x-icon" />
+
   </head>
 
   <body data-barba="wrapper">
       <header class="nav-header">
-          <h1><a href="./index.html" id="logo">Novadigital.</a></h1>
-          <div class="burger">
+        <h1><a href=    "./index.html" id="logo">
+          <img class="a" src="img/logoblanc.png" alt="novadigital">
+          <img class="b" src="img/logonoir.png" alt="novadigital">
+        </a></h1>
+            <div class="burger">
             <div class="line1"></div>
             <div class="line2"></div>
           </div>
       </header>
+      <div class="form-contact">
+
+        <form action="mailer-contact.php" method="post" class="form-style-7" enctype="multipart/form-data" >
+        <ul>
+            <legend>Contact</legend>
 
 
-      <div class="contact2">
+              <li>
+                <label for="name">Nom* :</label>
+                <input type="text" id="name" name="name" required >
+            </li>
+            <li>
+                <label for="mail">E-mail* :</label>
+                <input type="email" id="mail" name="mail" required>
+              </li>
+              <li>
+                <label for="msg">Message* :</label>
+                <textarea id="msg" name="msg"></textarea>
+              </li>
+              <li>
+              <label>
+                <p>
+                  <input  type="checkbox" value=""required>
+                 J'accepte que les informations saisies dans ce formulaire soient utilisées, exploitées ou traitées pour permettre de me recontacter  dans le cadre de la relation commerciale qui découle de cette demande.</p>
 
-      <div class="mail">
-        <h2>Contact</h2>
-        <p>Novadigital@contact.com<br>Novadigital@contact.com<br>0642772385</p>
+            </li>
+
+              <button type="submit" class="btn">Envoyer le message</button>
+              <li>
+                <p>* Champs Obligatoires
+                </p>
+              </li>
+          </ul>
+          </form>
+
+          <div class="contact2">
+
+           <div class="mail">
+             <h2>Contact</h2>
+             <p>Novadigital@contact.com</p>
+             <p>Novadigital@info.com</p>
+             <p>0642772385</p>
+           </div>
+
+           <div class="reseaux">
+             <h2>reseaux</h2>
+             <p> <a href="#"><img src="img/instagram.png"/></a>    <img src="img/linkedin.png"/> <img src="img/facebook.png"/></p>
+
+           </div>
+          </div>
+
       </div>
-      <div class="adresse">
-        <h2>adresse</h2>
-        <p>72 Avenue du Maréchale de Saxe <br>69003 Lyon </p>
-      </div>
-      </div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11133.801162056217!2d4.836267142965757!3d45.762165335429025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea58ca29c327%3A0xafaa769edffbe135!2s72%20Avenue%20Mar%C3%A9chal%20de%20Saxe%2C%2069003%20Lyon!5e0!3m2!1sfr!2sfr!4v1611926423346!5m2!1sfr!2sfr" width="100%" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4963.28488652065!2d4.842455756156237!3d45.76448760306659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea58ca29c327%3A0xafaa769edffbe135!2s72%20Avenue%20Mar%C3%A9chal%20de%20Saxe%2C%2069003%20Lyon!5e0!3m2!1sfr!2sfr!4v1613124553108!5m2!1sfr!2sfr" width="100%" height="30%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
 
 
     <nav class="nav-bar">

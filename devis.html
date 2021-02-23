@@ -6,19 +6,110 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Novadigital</title>
   </head>
-
   <body data-barba="wrapper">
     <header class="nav-header">
-        <h1><a href="./index.html" id="logo">Novadigital.</a></h1>
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-        </div>
+    <h1><a href="./index.html" id="logo">
+      <img class="a" src="img/logoblanc.png" alt="novadigital">
+      <img class="b" src="img/logonoir.png" alt="novadigital">
+    </a></h1>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+    </div>
     </header>
+
+    <div class="devis">
+
+    <img src="./img/dessin5.png" alt="novadigital"/>
+    <div class="devis2">
+      <h2>Devis</h2>
+      <br>
+      <h3>Commençons votre projet.</h3>
+      <br>
+      <p>Un projet de création de site internet et/ou un besoin webmarketing ? <br>
+        Transmettez-nous votre brief pour obtenir un devis.</p>
+    </div>
+  </div>
+  <div class="icone">
+    <img src="./img/flechee.png" alt="novadigital"/>
+  </div>
+
+
+ <br>
+
+    <div class="box">
+
+      <form enctype="multipart/form-data" method="post" action="mailer.php" id="form" class="form-style-7" >
+        <legend>Devis</legend><br>
+        <ul>
+          <a>Besoins</a><br>
+            <li >
+              <p><input name="check[]" type="checkbox" value="Creation de site internet">
+                    Création de site internet</p><br>
+                    <p><input  name="check[]" type="checkbox" value="Strategie digitale">
+                   Stratégie digitale</p><br>
+                   <p><input  name="check[]" type="checkbox" value=" webmarketing">
+                    Webmarketing</p><br>
+                    <p><input  name="check[]" type="checkbox" value="seo et sea">
+                    SEO & SEA</p><br>
+                    <p><input  name="check[]" type="checkbox"  value=" Cybersecurite et Wordpress">
+                    Cybersécurité et Wordpress</p>
+            </li>
+          <li>
+
+            <label for="fichier">Cahier des charges</label>
+            <input type="file" name="fichier" id="fichier" >
+        </li>
+
+          <a>Contact</a><br>
+        </li>
+          <li>
+          <label for="nom">Nom et Prénom*</label>
+          <input type="text"  id="nom"  required name="nom" placeholder="Entrer votre nom">
+           </li>
+      <li>
+          <label for="entreprise">Entreprise</label>
+          <input type="text" name="entreprise"  id="entreprise" placeholder="Entrer le nom de votre entreprise">
+      </li>
+      <li>
+        <label for="email">Adresse Email*</label>
+        <input type="email"  id="email" name="email" required placeholder="Entrer votre email">
+      </li>
+      <li>
+        <label for="tel">Téléphone*</label>
+        <input type="tel"  id="tel" name="tel" required placeholder="Entrer votre numéro de téléphone"  >
+      </li>
+
+        <li>
+
+        <label for="message">Message</label>
+        <textarea  id="message"  name="message" size="150"></textarea>
+
+      </li>
+      <br>
+      <li>
+        <p>
+          <input  type="checkbox" value="" required>
+         J'accepte que les informations saisies dans ce formulaire soient utilisées, exploitées ou traitées pour permettre de me recontacter  dans le cadre de la relation commerciale qui découle de cette demande.</p>
+      </li>
+      <div class="g-recaptcha" data-sitekey="6LdB2GIaAAAAAJecJQ1Lg8wjmIMwMUZP3W8W2321" data-size="invisible"></div>
+      <button type="submit" class="btn" onclick="Check()">Valider</button>
+      <button type="reset" class="btn ">Effacer</button>
+      <li>
+      <p>* Champs Obligatoires
+      </p>
+    </li>
+  </ul>
+  </form>
+</div>
+
+
+
 
     <nav class="nav-bar">
         <ul class="nav-links">
@@ -54,6 +145,6 @@
     <script src="https://unpkg.com/@barba/core"></script>
 
     <script src="./app.js"></script>
-
+    <script src="./js/form.js"></script>
   </body>
 </html>

@@ -7,10 +7,19 @@ const mouse = document.querySelector('.cursor');
 const mouseTxt = mouse.querySelector('span');
 const burger = document.querySelector(".burger");
 const menu = document.querySelector(".nav-bar");
-const img = document.querySelectorAll(".hero-img")
+const img = document.querySelectorAll(".hero-img");
+const head = document.querySelector(".nav-header");
+const logo = document.querySelector("#logo");
+const nova = document.querySelector(".a");
+const nova2 = document.querySelector(".b");
+const plus = document.getElementsByName('+');
+
 
 
 burger.addEventListener("click", navToggle);
+
+
+
 
 function cursor(e){
     mouse.style.top = e.pageY + "px";
@@ -33,17 +42,23 @@ function activeCursor(e){
     gsap.to(".title-swipe", 0.6, { y: "100%" });
   }
 }
+
+
 function navToggle(e){
     if (!e.target.classList.contains("active")) {
     e.target.classList.add('active');
     gsap.to('.line1', 0.5, {rotate: "45", y: 5, background:"black"});
     gsap.to('.line2', 0.5, {rotate: "-45", y: -5, background:"black"});
-    gsap.to("#logo", 1, { color: "black" });
+    gsap.to("#logo", 1, { img: "img/logonoir.png" });
     gsap.to('.nav-bar', 1, {clipPath: "circle(2500px at 100% -10%)"});
     document.body.classList.add("hide");
     menu.style.height = "100%";
     menu.style.width = "100%";
     mouse.style.border = " 2px solid black";
+    head.style.position = "fixed";
+    nova2.style.display = "flex"
+    nova.style.display = "none"
+
     }else{
     e.target.classList.remove('active');
     gsap.to('.line1', 0.5, {rotate: "0", y: 0, background:"white"});
@@ -54,83 +69,28 @@ function navToggle(e){
     menu.style.height = "0%";
     menu.style.width = "0%";
     mouse.style.border = " 2px solid white";
+    head.style.position = "";
+    nova.style.display = "flex"
+    nova2.style.display = "none"
     }
   }
-  // //Barba Page Transitions
-  // const logo = document.querySelector("#logo");
-  // barba.init({
-  //   views: [
-  //     {
-  //       namespace: "home",
-  //       beforeEnter() {
-  //         animateSlides();
-  //         logo.href = "./index.html";
-  //       },
-  //       beforeLeave() {
-  //         slideScene.destroy();
-  //         pageScene.destroy();
-  //         controller.destroy();
-  //
-  //       }
-  //     },
-  //     {
-  //       namespace: "fashion",
-  //       beforeEnter() {
-  //         logo.href = "../index.html";
-  //         detailAnimation();
-  //         location.reload();
-  //
-  //       },
-  //       beforeLeave() {
-  //         controller.destroy();
-  //         detailScene.destroy();
-  //
-  //       }
-  //     }
-  //   ],
-  //   transitions: [
-  //     {
-  //       leave({ current, next }) {
-  //         let done = this.async();
-  //         //An Animation
-  //         const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
-  //         tl.fromTo(current.container, 1, { opacity: 1 }, { opacity: 0 });
-  //         tl.fromTo(
-  //           ".swipe",
-  //           0.75,
-  //           { x: "-100%" },
-  //           { x: "0%", onComplete: done },
-  //           "-=0.5"
-  //         );
-  //       },
-  //       enter({ current, next }) {
-  //         let done = this.async();
-  //         //Scroll to the top
-  //         window.scrollTo(0, 0);
-  //         //An Animation
-  //         const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
-  //         tl.fromTo(
-  //           ".swipe",
-  //           1,
-  //           { x: "0%" },
-  //
-  //           { x: "100%", stagger: 0.2, onComplete: done }
-  //         );
-  //         tl.fromTo(next.container, 1, { opacity: 0 }, { opacity: 1 });
-  //
-  //         tl.fromTo(
-  //           ".nav-header",
-  //           1,
-  //           { y: "-100%" },
-  //           { y: "0%", ease: "power2.inOut" },
-  //           "-=1.5"
-  //         );
-  //       }
-  //     }
-  //   ]
-  //
-  // });
 
+
+  function Plus(i){
+    var texte=document.getElementsByClassName('hidden');
+    var titre=document.getElementsByClassName('Not-hidden');
+
+    if(texte[i].style.display != "flex"){
+      texte[i].style.display = "flex";
+      titre[i].style.display="none";
+      img[i].classList.add("img-hidden");
+
+   }
+   else{ texte[i].style.display = "none";
+   titre[i].style.display="flex";
+   img[i].classList.remove("img-hidden");
+
+   }}
 
 
 
@@ -138,3 +98,7 @@ function navToggle(e){
 
   window.addEventListener('mousemove', cursor);
   window.addEventListener('mouseover', activeCursor);
+  plus[0].addEventListener('click',  function (){Plus(0)});
+  plus[1].addEventListener('click',  function (){Plus(1)});
+  plus[2].addEventListener('click',  function (){Plus(2)});
+  plus[3].addEventListener('click',  function (){Plus(3)});

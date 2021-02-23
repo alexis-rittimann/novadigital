@@ -16,14 +16,14 @@
       x: 0,
       y: 0
     },
-    follower: {
-      x: 0,
-      y: 0
-    },
-    followerVelocity: {
-      x: 0,
-      y: 0
-    }
+    // follower: {
+    //   x: 0,
+    //   y: 0
+    // },
+    // followerVelocity: {
+    //   x: 0,
+    //   y: 0
+    // }
   };
 
   function lerp(current, target, speed = 0.1, limit = 0.001) {
@@ -103,9 +103,9 @@
     }
     updateFoldTransforms() {
       let y, x;
-
-      x = state.follower.x * window.innerWidth * 0.25;
-      y = state.follower.y * window.innerHeight * 0.25;
+      //
+      // x = state.follower.x * window.innerWidth * 0.25;
+      // y = state.follower.y * window.innerHeight * 0.25;
 
       foldsWrapper.style.transform = `translate(${x}px, ${y}px)`;
 
@@ -228,16 +228,16 @@
     let spring = 0.03;
     let friction = 0.75;
 
-    let relMouse = {
-      x: (state.mouse.x - state.follower.x) * spring,
-      y: (state.mouse.y - state.follower.y) * spring
-    };
-    state.followerVelocity.x =
-      (state.followerVelocity.x + relMouse.x) * friction;
-    state.followerVelocity.y =
-      (state.followerVelocity.y + relMouse.y) * friction;
-    state.follower.x += state.followerVelocity.x;
-    state.follower.y += state.followerVelocity.y;
+    // let relMouse = {
+    //   x: (state.mouse.x - state.follower.x) * spring,
+    //   y: (state.mouse.y - state.follower.y) * spring
+    // };
+    // state.followerVelocity.x =
+    //   (state.followerVelocity.x + relMouse.x) * friction;
+    // state.followerVelocity.y =
+    //   (state.followerVelocity.y + relMouse.y) * friction;
+    // state.follower.x += state.followerVelocity.x;
+    // state.follower.y += state.followerVelocity.y;
 
     state.targetScroll = -(
       document.documentElement.scrollTop || document.body.scrollTop

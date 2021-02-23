@@ -6,7 +6,7 @@ body {
 	overflow: hidden;
 	user-select: none;
 	cursor: grab;
-	background: #e5e4cf;
+	/* background: #e5e4cf; */
 	font-family: turquoise, serif;
 	--color-text: #a0893d;
 	--color-link: #000;
@@ -18,7 +18,7 @@ body {
 	width: calc(40vw + 1px);
 	height: 50vh;
 	will-change: transform;
-	background: #cec39e;
+	background: #ffd94e;
 }
 
 .wrapper-3d {
@@ -167,5 +167,8 @@ body {
 		grid-template-areas: 'title heading links'
 			'... ... ...'
 			'... demos demos';
+	}
+	.nav-header{
+		position: fixed;
 	}
 }

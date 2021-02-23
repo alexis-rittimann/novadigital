@@ -103,7 +103,7 @@ a:focus {
   transform-origin: top center;
 }
 .fold-center {
-  height: 50vh;
+  height: 60vh;
   width: 50vw;
 }
 
@@ -120,4 +120,16 @@ a:focus {
 
 .fold-content {
   padding: 0 2rem;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+
+  .fold-center {
+    width: 80vw
+  }
+  .content__type {
+    font-size: 3.5vw;
+  }
 }

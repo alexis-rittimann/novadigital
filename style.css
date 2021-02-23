@@ -91,13 +91,26 @@ html, body {
 #carousel-3 {
   background-color: #226de2;
 } */
-#logo{
-  color: white;
-  font-family: "Abril Fatface";
+#logo img{
+  /* background-image: url(img/logonoir.png); */
+  max-width: 45%;
+  max-height: 45%;
+}
+.b{
+  display: none;
+}
+.hidden{
+  display:none;
+}
+.Not-hidden{
+  display: flex;
+}
+.hero-desc li{
+  list-style:none;
 }
 .nav-header{
   min-height: 10vh;
-  font-size: 1rem;
+  font-size: 1em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -119,7 +132,7 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   /* flex: 1; */
   /* flex-basis: 25rem; */
   padding-left: 0rem;
@@ -137,34 +150,37 @@ html, body {
 }
 
 .hero-img img{
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 75%;
+  max-height: 75%;
   object-fit: cover;
-  margin-left: 5rem;
+  margin-left: 5%;
   animation: slideInLeft; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 1.5s; /* don't forget to set a duration! */
 }
-.fashion-span{
-    color: rgb(255, 139, 93);
-}
 .mountain-span{
-    color: #FFE66D;
+    color: #ffd94e;
 }
-.last-span{
-    color: #3C91E6;
+.fashion-span{
+    color: #98cf83;
 }
 .hike-span{
-    color: #4ecdc4;
+    color: #ee7d55;
+}
+.last-span{
+    color: #7276be;
 }
 .hero-desc h2{
   font-family: "Abril Fatface";
   font-size: 5rem;
+  /* text-align: center; */
 }
 .hero-desc p{
   padding: 3rem 0rem;
   font-size: 1.5rem;
   color: rgb(223,223,223);
+  text-align: justify;
 }
+
 .explore{
   padding: 1rem 2rem;
   background: none;
@@ -175,6 +191,7 @@ html, body {
   text-decoration: none;
   align-self: flex-start;
   cursor: pointer;
+  margin-right: 20px;
 }
 .nav-bar{
   position: fixed;
@@ -200,7 +217,7 @@ html, body {
 }
 .nav-links a{
   text-decoration: none;
-  color: black;
+  color: #111111;
 }
 .nav-links h3{
   padding: 3rem 0rem;
@@ -217,7 +234,6 @@ html, body {
   line-height: 2rem;
 }
 
-
 .cursor{
   width: 3rem;
   height: 3rem;
@@ -231,11 +247,11 @@ html, body {
   transform-origin: 75% 75%;
 }
 .cursor.nav-active{
-  background: rgb(86, 124, 228);
+  background: #ffd94e;
   transform: scale(3);
 }
 .cursor.explore-active{
-  background: white;
+  background: #ffd94e;
   transform: scale(3);
 }
 .cursor-text{
@@ -262,16 +278,16 @@ html, body {
 
 }
 .t-swipe2{
-  background: rgb(255, 139, 93);
+  background: #98cf83;
 }
 .t-swipe1{
-  background: #FFE66D;
+  background: #ffd94e;
 }
 .t-swipe3{
-  background: #4ecdc4;
+  background: #ee7d55;
 }
 .t-swipe4{
-  background: #3C91E6;
+  background: #7276be;
 }
 .swipe{
   position: fixed;
@@ -292,4 +308,335 @@ html, body {
 .swipe3{
   background: #3C91E6;
   z-index: 3;
+}
+
+iframe{
+  position: absolute;
+  bottom: 0;
+}
+.devis{
+  color: white;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 10%;
+}
+.devis2{
+
+}
+.devis h2{
+  font-family: "Abril Fatface";
+  font-size: 5rem;
+  color: #ffd94e;
+}
+.devis h3{
+  font-size: 2rem;
+}
+.devis img{
+  max-height: 80%;
+}
+.icone img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -8%;
+}
+@media screen and (max-width: 1500px) {
+  .hero-img {
+    max-width: 80%;
+    /* height: auto; */
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    width: 100%;
+    margin: 0;
+  }
+  .devis{
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 25%;
+  }
+  .icone img{
+
+    margin-top: -40%;
+  }
+
+  .slide {
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+
+  }
+  .hero-desc {
+    padding: 0;
+    margin: 0;
+  }
+  .hero-img {
+    padding-top: 8rem;
+    margin-left: 0rem;
+    align-items: center;
+  }
+  .hero-desc h2 {
+    font-size: 3.6rem;
+    padding: 1rem 1rem;
+    margin: 0;
+    width: 100%;
+  }
+  .hero-desc p {
+    padding: 2rem 3rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: justify;
+  }
+  .explore {
+    width: 60%;
+    margin: auto;
+    font-size: 2rem;
+  }
+  .detail-slide {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-bar {
+    display: block;
+  }
+  .nav-links {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 40%;
+  }
+
+  .nav-links h3{
+    line-height: 0.20rem;
+    font-size: 5rem;
+    margin-top: 25%;
+    font-weight: bold;
+  }
+  .contact{
+    display: none;
+ }
+ /* .contact2{
+   flex-direction: column;
+
+ } */
+ .adresse{
+   margin: 1vh 0vh;
+ }
+ .mail{
+   margin: 1vh 0vh;
+ }
+  /* .contact2 h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 0vh;
+
+  }
+  .contact2 p {
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-align: center;
+  } */
+  .scrollmagic-pin-spacer {
+    display: none;
+  }
+  .nav-header{
+    padding: 0 4rem;
+    min-height: 10vh;
+    font-size: 1em;
+  }
+  #logo img{
+    max-width: 65%;
+    max-height: 65%;
+  }
+  .line1,.line2{
+    width: 5rem;
+    height: 0.4rem;
+    margin: 0.4rem;
+  }
+  .cursor{
+    display:  none;
+  }
+  .explore {
+     display: inline-block;
+     margin: 10px;
+     padding : 0.5rem 1rem;
+     width: 60%;
+     font-size: 2rem;
+   }
+   .img-hidden{
+    display: none;
+   }
+
+}
+.btn {
+display: inline;
+font-weight: 400;
+text-align: center;
+align-items: center;
+background-color: #ffd94e;
+
+color: black  ;
+margin-left: 30%;
+margin-bottom: 1%;
+border: 1px solid transparent ;
+padding: 1%;
+font-size: 0.875rem;
+line-height: 2;
+border-radius: 0.25rem;
+}
+.form-contact button{
+  margin-left: 40%;
+}
+.box {
+
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 0.3rem;
+
+}
+
+legend{
+  text-align: center;
+  font-family: "Abril Fatface";
+  font-size: 2rem;
+  padding-bottom: 1%;
+  color: #fcc910;
+}
+.form-style-7 {
+	max-width:100%;
+	margin: auto;
+	border-radius:1%;
+	padding:1%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.form-style-7 ul{
+	list-style:none;
+	padding:0;
+	margin:0;
+
+}
+.form-style-7 li{
+	display: block;
+  padding: 10px;
+	border:1px solid #fcc910 ;
+  margin-top: 40px;
+	margin-bottom: 40px;
+	border-radius: 3px;
+  background:transparent;
+  color :white;
+
+}
+.form-style-7 a{
+  border-bottom :1px solid #fcc910  ;
+	margin-bottom: 10px;
+  margin-left: 0%;
+  color: #fcc910;
+  padding: 2px;
+  font-size: 1.25rem;
+}
+.form-style-7 li:last-child{
+  border: none;
+	margin-bottom: 0%;
+  margin-left: 0%;
+  color: #999;
+
+}
+.form-style-7 li > label{
+  display: block;
+	float: left;
+	margin-top: -30px;
+	height: 1%;
+	padding: -1%;
+	color: white;
+	font-size: 14px;
+	overflow: hidden;
+	font-family: Arial, Helvetica, sans-serif;
+
+}
+.form-style-7 input[type="text"],
+.form-style-7 input[type="tel"],
+.form-style-7 input[type="email"],
+.form-style-7 textarea
+{
+  box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 80%;
+	padding: 7px;
+	border: none;
+	margin-bottom: 10px;
+	font: 16px Arial, Helvetica, sans-serif;
+	height: 25px;
+  color :white;
+  background: transparent;
+}
+
+.form-style-7 textarea{
+  resize:none;
+  height: 50px;
+}
+.form-style-7 input[type="file"]::-webkit-file-upload-button {
+  visibility: hidden;
+
+}
+
+.form-style-7 input[type="file"]::before {
+  content: 'Fichier PDF seulement';
+  display: inline-block;
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+  color:white;
+}
+.form-style-7 input[type="file"]:hover::before {
+  border-color: white;
+}
+.form-style-7 input[type="file"]:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+.form-contact{
+  width: 90%;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.form-contact form{
+  width: 40%;
+  margin-left: 10%;
+}
+.contact2{
+  color: white;
+  margin-top: 2%;
+}
+.contact2 h2{
+  font-size: 3rem;
+  padding: 2rem 0rem;
+}
+.contact2 p{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
