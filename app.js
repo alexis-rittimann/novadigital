@@ -77,26 +77,24 @@ function navToggle(e){
 
 
   function Plus(i){
-    var texte1=document.getElementsByClassName('textt');
+    var texte1=document.getElementsByClassName('text');
     var texte=document.getElementsByClassName('hidden');
     var titre=document.getElementsByClassName('Not-hidden');
-    var texte2=document.getElementsByClassName('too');
-    var texte3=document.getElementsByClassName('onn');
+    var texte2=document.getElementsByName('cache');
+    var texte3=document.getElementsByName('titre-cache');
 
 
 
     if(texte[i].style.display != "flex"){
       texte[i].style.display = "flex";
-      texte2[i].style.fontSize = "1rem";
-      texte3[i].classList.add("thee")
-      texte1[i].style.fontSize = "1rem";
+      texte1[i].classList.add("size");
       titre[i].style.display="none";
       img[i].classList.add("img-hidden");
 
    }
    else{ texte[i].style.display = "none";
    titre[i].style.display="flex";
-   texte1[i].style.fontSize = "1.5rem";
+   texte1[i].classList.remove("size");
    img[i].classList.remove("img-hidden");
    }}
 
