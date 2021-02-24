@@ -14,7 +14,7 @@ $mail->SMTPAuth = true;
 $mail->Username = 'devis@novadigital.fr';
 $mail->Password = 'Cooky.2021';
 $mail->setFrom('devis@novadigital.fr');
-$mail->addAddress('amaukill@gmail.com');
+$mail->addAddress('novadigital.contact@gmail.com');
 $mail->Subject = "Message". $_POST['name'];
 $mail->isHTML(true); // Set email format to HTML
 $mail->Body = '<ul>

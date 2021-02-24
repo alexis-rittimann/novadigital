@@ -407,11 +407,13 @@ a:focus {
 	flex-direction: column;
 	margin-top: 5%;
 }
+.phone div{
+	margin-top: 5%;
+	display: flex;
+	align-items: center;
+}
 .phone img{
-
 	width: 50%;
-
-
 }
 .phone h3{
 	padding: 0;

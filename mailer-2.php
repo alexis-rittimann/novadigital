@@ -14,15 +14,15 @@ $mail->SMTPAuth = true;
 $mail->Username = 'devis@novadigital.fr';
 $mail->Password = 'Cooky.2021';
 $mail->setFrom('devis@novadigital.fr');
-$mail->addAddress('amaukill@gmail.com'); // à changer
+$mail->addAddress('novadigital.contact@gmail.com'); // à changer
 $mail->Subject = "Devis de ". $_POST['nom'];
 $mail->isHTML(true); // Set email format to HTML
 $Besoin="";
 $check = $_POST['check'];
-  if(empty($check)) 
+  if(empty($check))
   {
     echo("erreur");
-  } 
+  }
   else
   {
     $N = count($check);
@@ -43,7 +43,7 @@ $mail->Body = '<ul>
 </ul>';
 $msg = "";
  if (isset($_FILES["fichier"]) && $_FILES['fichier']['name'] != "") {
-     
+
         $nom_fichier = $_FILES['fichier']['name'];
         $source = $_FILES['fichier']['tmp_name'];
         $type_fichier = $_FILES['fichier']['type'];
