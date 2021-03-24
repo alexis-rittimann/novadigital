@@ -1,0 +1,7 @@
+User-agent : *
+
+Allow: /index.html/
+Allow: /project.html/
+Allow: /equipe.html/
+
+Sitemap: https://www.novadigital.fr/sitemap.xml

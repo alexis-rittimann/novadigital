@@ -27,13 +27,15 @@ a:focus {
   margin: 2rem 0 1rem;
   font-weight: 700;
   text-transform: uppercase;
+  font-family: "Montserrat", "sans-serif";
+  font-size: 1vw;
 }
 
 .content__type {
-  font-size: 2.5vw;
+  font-size: 2.25vw;
   margin: 3rem auto 5rem;
   line-height: 1.25;
-  font-family: halyard-display, sans-serif;
+  font-family: "Montserrat", "sans-serif";
   font-weight: 300;
   backface-visibility: hidden;
   -webkit-user-select: none;
@@ -109,9 +111,9 @@ a:focus {
 
 .fold {
   overflow: hidden;
-  //border: 1px solid #000;
+  /*border: 1px solid #000;
   border-top: 0;
-  border-bottom: 0;
+  border-bottom: 0;*/
 }
 .fold-scroller {
   display: flex;
@@ -120,14 +122,17 @@ a:focus {
 
 .fold-content {
   padding: 0 2rem;
+  
 }
-
 
 @media screen and (max-width: 1024px) {
 
 
   .fold-center {
     width: 80vw
+  }
+  .content__headline{
+    font-size: 2vw;
   }
   .content__type {
     font-size: 3.5vw;

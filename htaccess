@@ -1,0 +1,22 @@
+Options +FollowSymlinks
+RewriteEngine on
+RewriteRule ^Accueil$  index.html [L]
+RewriteRule ^Projet$  project.html [L]
+RewriteRule ^Devis$  devis.html [L]
+RewriteRule ^Contact$  contact.html [L]
+RewriteRule ^Equipe$  equipe.html [L]
+RewriteRule ^Blog$  blog.html [L]
+RewriteRule ^Article-1$  article1.html [L]
+RewriteRule ^Article-2$  article2.html [L]
+RewriteRule ^Article-3$  article3.html [L]
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW SSL_REDIRECT:novadigital.fr
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} (www\.)?novadigital.fr
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW SSL_REDIRECT:novadigital.fr
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW UPGRADE_INSECURE_REQUESTS:novadigital.fr
+Header always set Content-Security-Policy: upgrade-insecure-requests
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW UPGRADE_INSECURE_REQUESTS:novadigital.fr

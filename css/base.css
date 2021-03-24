@@ -77,14 +77,16 @@ body {
 .nav-links{
   font-size: 3rem;
   flex-basis: 30rem;
-
+  margin-left: 5%;
 }
 .nav-links a{
   text-decoration: none;
   color: #111111;
+  
 }
 .nav-links h3{
-  padding: 1rem 0rem;
+	padding: 1rem 0rem;
+  
 }
 .contact{
   flex-basis: 30rem;
@@ -419,5 +421,9 @@ a:focus {
 	padding: 0;
 	margin: 1rem;
 	color: white;
+	font-family: "Montserrat", "sans-serif";
+}
+.resize{
+	font-size: 0.9rem;
 }
 }

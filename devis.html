@@ -14,15 +14,15 @@
   <body data-barba="wrapper">
     <header class="nav-header">
     <h1><a href="./Accueil" id="logo">
-      <img class="a" src="img/logoblanc.png" alt="Logo Novadigital">
-      <img class="b" src="img/logonoir.png" alt="Logo Novadigital">
+      <img class="a" src="img/logoblanc.png" alt="Logo Novadigital" id="logo">
+      <img class="b" src="img/logonoir.png" alt="Logo Novadigital" id="logo">
     </a></h1>
     <div class="burger">
       <div class="line1"></div>
       <div class="line2"></div>
     </div>
     </header>
-
+    
     <div class="devis">
 
     <img src="./img/dessin5.png" alt="Novadigital demande de devis gratuit"/>
@@ -45,10 +45,9 @@
     <div class="box">
 
       <form enctype="multipart/form-data" method="post" action="mailer.php" id="form" class="form-style-7" >
-        <legend>Devis</legend><br>
         <ul>
-          <a>Besoins</a><br>
-            <li >
+          <a>Besoins*</a><br>
+            <li class="besoin">
               <p><input name="check[]" type="checkbox" value="Creation de site internet">
                     Création Site vitrine</p><br>
                     <p><input  name="check[]" type="checkbox" value="Strategie digitale">
@@ -58,46 +57,44 @@
                     <p><input  name="check[]" type="checkbox" value="seo et sea">
                     SEO & SEA</p><br>
                     <p><input  name="check[]" type="checkbox"  value=" Cybersecurite et Wordpress">
-                    Maintenace de site (Wordpress, Shopify)</p>
-            </li>
-          <li>
-
-            <label for="fichier">Cahier des charges</label>
+                    Maintenace de site (Wordpress, Shopify ...)</p>
+            </li><br>
+            <a>Cahier des charges</a>
+          <li class="besoin">
             <input type="file" name="fichier" id="fichier" >
-        </li>
+        </li><br>
 
-          <a>Contact</a><br>
+          <a>Contact</a><br><br>
         </li>
-          <li>
+          <li class="devis-contact">
           <label for="nom">Nom et Prénom*</label>
           <input type="text"  id="nom"  required name="nom" placeholder="Entrer votre nom">
            </li>
-      <li>
+      <li class="devis-contact">
           <label for="entreprise">Entreprise</label>
           <input type="text" name="entreprise"  id="entreprise" placeholder="Entrer le nom de votre entreprise">
       </li>
-      <li>
+      <li class="devis-contact">
         <label for="email">Adresse Email*</label>
         <input type="email"  id="email" name="email" required placeholder="Entrer votre email">
       </li>
-      <li>
+      <li class="devis-contact">
         <label for="tel">Téléphone*</label>
         <input type="tel"  id="tel" name="tel" required placeholder="Entrer votre numéro de téléphone"  >
       </li>
 
-        <li>
+        <li class="devis-contact">
 
         <label for="message">Message</label>
-        <textarea  id="message"  name="message" size="150"></textarea>
+        <textarea  id="message"  name="message" placeholder="Entrer votre message" size="150"></textarea>
 
-      </li>
-      <br>
-      <li>
+      </li><br>
+      <li class="besoin">
         <p>
           <input  type="checkbox" value="" required>
          J'accepte que les informations saisies dans ce formulaire soient utilisées, exploitées ou traitées pour permettre de me recontacter  dans le cadre de la relation commerciale qui découle de cette demande.</p>
-      </li>
-      <div class="g-recaptcha" data-sitekey="6LdB2GIaAAAAAJecJQ1Lg8wjmIMwMUZP3W8W2321" data-size="invisible"></div>
+      </li><br>
+      <div class="g-recaptcha" data-sitekey="6LcICWMaAAAAAL_VOPC5QQmH-mxPsxCzdrMo6lXT" data-size="invisible"></div>
       <button type="submit" class="btn" onclick="Check()">Valider</button>
       <button type="reset" class="btn ">Effacer</button>
       <li>
@@ -111,20 +108,22 @@
 
 
 
+
     <nav class="nav-bar">
         <ul class="nav-links">
           <a class="inBurger" href=./Devis><h3>Devis</h3></a>
           <a class="inBurger" href=./Projet><h3>Projet</h3></a>
           <a class="inBurger" href=./Contact><h3>Contact</h3></a>
           <a class="inBurger" href=./Equipe><h3>Equipe</h3></a>
+          <a class="inBurger" href=./Blog><h3>Blog</h3></a>
 
         </ul>
         <div class="contact">
           <h2>Contact</h2>
           <p>
-            contact@novadigital.com<br>devis@novadigital.com<br>0642772385
+            contact@novadigital.com<br>devis@novadigital.com<br><br>06.42.77.23.85
           </p>
-          <h2>adresse</h2>
+          <h2>Adresse</h2>
           <p>72 Avenue du Maréchale de Saxe <br>69003 Lyon </p>
         </div>
       </nav>

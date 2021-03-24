@@ -56,7 +56,7 @@
 html, body {
   height: 100%;
   width: 100%;
-
+  cursor: url(./img/point.png),crosshair;
   background-image: url(./img/26.jpg);
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
@@ -80,6 +80,16 @@ html, body {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+
+}
+#carousel > article {
+  max-height: 30%;
+  max-width: 30%;
+  word-wrap: break-word;
+  color: #fff;
+  font-size: 20px;
+  display:inline-block;
+  justify-content:space-between;
 }
 footer{
   margin-top: auto;
@@ -87,8 +97,10 @@ footer{
   width: 100%;
     padding-right: 2%;
     padding-left: 2%;
-    padding-bottom: 1%;
+    padding-bottom: 3%;
+    margin-top: 5%;
   justify-content: space-between;
+  
   }
   .footer ul {
 	  display: inline-flex;
@@ -97,9 +109,14 @@ footer{
    list-style: none;
    padding :20px;
    
+   
+ }
+ .flemme{
+   visibility: hidden;
  }
  .footer a{
-   color: #fcc910;
+   color: white;
+   text-decoration: none;
  }
 #logo img{
   max-width: 45%;
@@ -157,7 +174,43 @@ footer{
   flex: 1;
   flex-basis: 25rem;
 }
+.hero-art{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2.5rem;
+  position: relative;
+  max-width: 80vh;
 
+}
+article> .hero-art{
+  margin-bottom: 2%;
+}
+section > .hero-art 
+{
+  margin-top: 5%;
+}
+section >.hero-art img{
+  max-width: 75%;
+  max-height: 75%;
+}
+article >.hero-art img{
+  width: 100%;
+  height: 20rem;
+}
+.art-img{
+  display: flex;
+  flex-direction: column;
+  max-width: 80vh;
+  object-fit: cover;
+}
+.hero-art h3{
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+}
+.hero-art li{
+  list-style:none;
+}
 .hero-img img{
   max-width: 75%;
   max-height: 75%;
@@ -165,6 +218,12 @@ footer{
   margin-left: 5%;
   animation: slideInLeft; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 1.5s; /* don't forget to set a duration! */
+}
+.titre-art{
+  margin:2%;
+  color: #fff;
+  font-size: 2rem;
+  display: flex;
 }
 .mountain-span{
     color: #ffd94e;
@@ -196,12 +255,14 @@ footer{
 .hidden h3{
   color: #ffd94e;
  text-align: left;
+ font-family: "Abril Fatface";
 }
 .Not-hidden{
   display: flex;
 }
 .size{
   font-size: 1.1rem;
+  font-family: "Montserrat",sans-serif;
 }
 .explore{
   padding: 1rem 2rem;
@@ -214,9 +275,11 @@ footer{
   align-self: flex-start;
   cursor: pointer;
   margin-right: 20px;
+ 
 }
 .nav-bar{
   position: fixed;
+ 
   top: 0;
   left: 0;
   width: 0%;
@@ -225,30 +288,36 @@ footer{
   background-image: url(./img/18.jpg);
   display: flex;
   justify-content: space-around;
-  align-items: center;
+ align-items: center;
   clip-path: circle(50px at 100% -10%);
   -webkit-clip-path: circle(50px at 100% -10%);
+  
 }
 .burger{
   cursor: pointer;
 }
 .nav-links{
+  
   font-size: 3rem;
   flex-basis: 30rem;
-
+  margin-left: 5%;
 }
 .nav-links a{
+
   text-decoration: none;
   color: #111111;
+ 
 }
 .nav-links h3{
-  padding: 3rem 0rem;
+  padding: 2rem 0rem;
 }
 .contact{
+  
   flex-basis: 30rem;
 }
 .contact h2{
-  font-size: 3rem;
+  
+  font-size: 2.5rem;
   padding: 2rem 0rem;
 }
 .contact p{
@@ -331,8 +400,10 @@ footer{
   background: #3C91E6;
   z-index: 3;
 }
-
-
+.reseau img{
+  padding-left: 10px;
+  padding-top: 10px;
+}
 .devis{
   color: white;
   display: flex;
@@ -350,29 +421,35 @@ footer{
   font-size: 2rem;
 }
 .devis img{
-  max-height: 80%;
+  max-height: 75%;
 }
 .icone img{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -8%;
+  margin-top: -6%;
+  width: 2.5%;
+  
 }
+
+
 .btn {
 display: inline;
 font-weight: 400;
 text-align: center;
 align-items: center;
 background-color: #ffd94e;
-
+font-size: "Montserrat", sans-serif;
 color: black  ;
-margin-left: 30%;
-margin-bottom: 1%;
-border: 1px solid transparent ;
+margin-left: 27%;
+margin-top: 2%;
+margin-bottom: 3%;
+border: 1px solid transparent;
 padding: 1%;
 font-size: 0.875rem;
 line-height: 2;
 border-radius: 0.25rem;
+letter-spacing: 2px;
 }
 .form-contact button{
   margin-left: 40%;
@@ -399,7 +476,7 @@ legend{
 	margin: auto;
 	border-radius:1%;
 	padding:1%;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  
 }
 
 .form-style-7 ul{
@@ -408,30 +485,41 @@ legend{
 	margin:0;
 
 }
-.form-style-7 li{
+.devis-contact{
 	display: block;
   padding: 10px;
 	border:1px solid #fcc910 ;
-  margin-top: 40px;
-	margin-bottom: 40px;
+  margin-top: 60px;
+	margin-bottom: 60px;
 	border-radius: 3px;
   background:transparent;
   color :white;
 
 }
+.besoin{
+ 
+  display: block;
+  padding: 10px;
+  margin-top: 40px;
+	margin-bottom: 40px;
+	border:none;
+  background:transparent;
+  color :white;
+}
+
 .form-style-7 a{
-  border-bottom :1px solid #fcc910  ;
-	margin-bottom: 10px;
   margin-left: 0%;
   color: #fcc910;
   padding: 2px;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
+  font-family: "Abril Fatface";
 }
 .form-style-7 li:last-child{
   border: none;
-	margin-bottom: 0%;
+	margin-bottom: 2%;
   margin-left: 0%;
   color: #999;
+  padding-top: 40px;
 
 }
 .form-style-7 li > label{
@@ -441,11 +529,12 @@ legend{
 	height: 1%;
 	padding: -1%;
 	color: white;
-	font-size: 14px;
+	font-size: 16px;
 	overflow: hidden;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Montserrat", sans-serif;
 
 }
+
 .form-style-7 input[type="text"],
 .form-style-7 input[type="tel"],
 .form-style-7 input[type="email"],
@@ -460,7 +549,7 @@ legend{
 	padding: 7px;
 	border: none;
 	margin-bottom: 10px;
-	font: 16px Arial, Helvetica, sans-serif;
+	font: 16px "Montserrat", sans-serif;
 	height: 25px;
   color :white;
   background: transparent;
@@ -478,15 +567,13 @@ legend{
 .form-style-7 input[type="file"]::before {
   content: 'Fichier PDF seulement';
   display: inline-block;
-  background: linear-gradient(top, #f9f9f9, #e3e3e3);
   border: 1px solid #999;
   border-radius: 3px;
   padding: 5px 8px;
   outline: none;
   white-space: nowrap;
   cursor: pointer;
-  text-shadow: 1px 1px #fff;
-  font-weight: 700;
+
   font-size: 10pt;
   color:white;
 }
@@ -522,7 +609,12 @@ legend{
 }
 .page-contact{
   height: 20%;
+  margin-top: 8%;
 }
+iframe{
+  margin-top: 3%;
+}
+
 @media screen and (max-width: 1500px) {
   .hero-img {
     max-width: 80%;
@@ -583,6 +675,22 @@ legend{
     .icone img{
       margin-top: 15%;
     }
+    .nav-bar {
+      display: block;
+    }
+    .nav-links {
+      font-size: 2rem;
+      text-align: center;
+      margin-top: 15%;
+    }
+  
+    .nav-links h3{
+      line-height: 0.20rem;
+      font-size: 4rem;
+      margin-top: 10%;
+      font-weight: bold;
+      font-family: "Montserrat",sans-serif;
+    }
    .box{
      width: 90%;
      height: 100%;
@@ -591,7 +699,8 @@ legend{
      font-size: 2.5rem;
    }
    .form-style-7 a{
-     font-size: 2rem;
+     font-size: 2.25rem;
+     
    }
    .btn {
      font-size: 1.4rem;
@@ -621,8 +730,8 @@ legend{
   }
 
   .icone img{
-
-    margin-top: -40%;
+    width: 4%;
+    margin-top: -37.5%;
   }
 
   .slide {
@@ -635,30 +744,24 @@ legend{
     text-align: center;
 
   }
+ 
   .hero-desc {
     padding: 0;
     margin: 0;
 
   }
-  .hero-img {
-    padding-top: 8rem;
-    margin-left: 0rem;
-    align-items: center;
-  }
+  
+  
+ 
   .hero-desc h2 {
     font-size: 3.6rem;
     padding: 1rem 1rem;
     margin: 0;
     width: 100%;
   }
-  .text {
-    padding: 2rem 3rem;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    text-align: justify;
-  }
+ 
   .size{
-    font-size: 0.7rem;
+    font-size: 1.25rem;
   }
   .explore {
     width: 60%;
@@ -670,21 +773,6 @@ legend{
     text-align: center;
   }
 
-  .nav-bar {
-    display: block;
-  }
-  .nav-links {
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 40%;
-  }
-
-  .nav-links h3{
-    line-height: 0.20rem;
-    font-size: 5rem;
-    margin-top: 25%;
-    font-weight: bold;
-  }
   .contact{
     display: none;
  }
@@ -726,5 +814,173 @@ legend{
    .img-hidden{
     display: none;
    }
+   .hero-art {
+    padding: 0.25rem;
+    margin: 0.25rem;
+    height: 80%;
+  }
+  .hero-art img{
+    align-self: center;
+    }
+  
+  .hero-art h3 {
+    padding-top: 2.5rem;
+    font-size: 2.25rem;
+    width: 100%;
+    align-items: center;
+  }
+  .hero-art p{
+    font-size: 1.1rem;
+  }
+   @media screen and (min-width: 400px)  {
+    .devis{
+      height: 70%;
+      margin-top: 5%;
+    }
+    .icone img{
+      width: 4%;
+      margin-top: 15%;
+    }
+  
+  }
+ 
 
+@media (max-device-width: 500px){
+  .titre-art{
+    font-size: 3rem;
+  }
+ 
+  #carousel > article {
+    max-height: 100%;
+    max-width:100%;
+    display: flex;
+    align-items: center;
+   flex-direction: row;
+   
+   font-size: 0.9rem;
+  }
+  .hero-art {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .hero-art p{
+    font-size: 2.5rem;
+  }
+   section > .hero-art img{
+    align-self: center;
+    height: 80%;
+    }
+    article > .hero-art img{
+      height: 50%;
+      width: 100%;
+    }
+    .hero-art h3 {
+      font-size: 4rem;
+      align-items: center;
+      width: 100%;
+    }
+    .nav-bar {
+      display: block;
+    }
+    .nav-links {
+      font-size: 2rem;
+      text-align: center;
+      margin-top: 40%;
+    }
+  
+    .nav-links h3{
+      line-height: 0.20rem;
+      font-size: 5rem;
+      margin-top: 25%;
+      font-weight: bold;
+      font-family: "Montserrat",sans-serif;
+    }
+    .text {
+      padding: 2rem 3rem;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      text-align: justify;
+    }
+    .size{
+      font-size: 1.25rem;
+    }
+}
+@media (max-device-width: 800px){
+  .art-img{
+    float: left;
+   height: 50%;
+  width: 50%;
+  }
+
+}
+
+@media (min-device-width:800px) and (max-device-width: 1024px){
+  .nav-bar {
+    display: block;
+  }
+  .nav-links {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 10%;
+  }
+
+  .nav-links h3{
+    line-height: 0.20rem;
+    font-size: 3rem;
+    margin-top: 5%;
+    font-weight: bold;
+    font-family: "Montserrat",sans-serif;
+  }
+}
+@media (min-device-width:550px) and (max-device-width: 1024px){
+  .hero-img {
+   align-items: center;
+   flex-basis: 20rem;
+   margin-left: -1.2rem;
+   padding-top: 3rem;
+   max-width: 50%;
+  }
+
+ .text {
+    padding: 2rem 3rem;
+    font-size: 1.15rem;
+    line-height: 1.5rem;
+    text-align: justify;
+  }
+}
+@media(max-device-height:700px){
+  .hero-img img{
+    width: 60%;
+    height:50%;
+  }
+  .text {
+    font-size: 1.15rem;
+    line-height: 1.5rem;
+    text-align: justify;
+  }
+  .hero-desc h2 {
+    font-size: 3rem;
+   
+  }
+  .hero-desc{
+    max-width: 110vh;
+  }
+}
+@media(max-height:650px){
+  .hero-img img{
+    width: 35%;
+    margin-left: 20%;
+  }
+  .text {
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: justify;
+  }
+  .hero-desc h2 {
+    font-size: 2.5rem;
+   
+  }
+  .hero-desc{
+    max-width: 120vh;
+  }
 }
